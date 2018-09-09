@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+  
+</head>
+<body onload="init();">
+  <video id="vid" poster="preview.png" controls>
+    <source src="http://html5doctor.com/demos/video-canvas-magic/video.mp4"
+            type="video/mp4">
+</video>
+<p>Example of custom controls :</p>
+ 
+<button class="mybutton" onclick="go();">Play</button>
+<button class="mybutton" onclick="haveARest();">Pause</button>
+<button class="mybutton" onclick="rewind();">Start from beginning</button>
+ 
+<script>
+  vid = document.querySelector("#vid");
+  function go() {
+    vid.play();
+  }
+  function haveARest() {
+    vid.pause();
+  }
+  function rewind() {
+    vid.currentTime = 0;
+  }
+</script>
+</body>
+</html>
